@@ -164,15 +164,15 @@ public class ClearMessage: Message {
         
         switch digestType {
         case .sha1:
-            digest = (data as NSData).swiftyRSASHA1()
+            digest = (data as NSData).swiftyRSASHA1() as Data
         case .sha224:
-            digest = (data as NSData).swiftyRSASHA224()
+            digest = (data as NSData).swiftyRSASHA224() as Data
         case .sha256:
-            digest = (data as NSData).swiftyRSASHA256()
+            digest = (data as NSData).swiftyRSASHA256() as Data
         case .sha384:
-            digest = (data as NSData).swiftyRSASHA384()
+            digest = (data as NSData).swiftyRSASHA384() as Data
         case .sha512:
-            digest = (data as NSData).swiftyRSASHA512()
+            digest = (data as NSData).swiftyRSASHA512() as Data
         }
         
         return digest
